@@ -26,18 +26,6 @@ public class ComputerTest {
 
         System.out.println("************Retrieving the beans******************");
 
-        SonyMonitor sony = container.getBean(SonyMonitor.class);
-        DellCase dell = container.getBean(DellCase.class);
-        AsusMotherboard asus = container.getBean(AsusMotherboard.class);
-
-        PC myPc = new PC(dell,sony,asus);
-
-        myPc.powerUp();
-
-        dell.pressPowerButton();
-
-        System.out.println("************Retrieving the beans******************");
-
 //        Monitor theMonitor = container.getBean(Monitor.class);
 //        Case theCase = container.getBean(Case.class);
 //        Motherboard theMotherboard = container.getBean(Motherboard.class);
@@ -46,11 +34,16 @@ public class ComputerTest {
 
         System.out.println("************Multiple Objects******************");
 
-        Monitor theMonitor2 = container.getBean("monitorSony", Monitor.class);  //DEFAULT BEAN NAME
-        Monitor theMonitor3 = container.getBean("sony", Monitor.class);  //CUSTOM BEAN NAME
+        Monitor theMonitor2 = container.getBean("sony", Monitor.class);  //DEFAULT BEAN NAME
+        Monitor theMonitor3 = container.getBean("sony2", Monitor.class);  //CUSTOM BEAN NAME
         Monitor theMonitor4 = container.getBean( Monitor.class);  //@Primary
+        DellCase dell = container.getBean(DellCase.class);
+        AsusMotherboard asus = container.getBean(AsusMotherboard.class);
+        PC myPc = new PC(dell,theMonitor2,asus);
 
+        myPc.powerUp();
 
+        dell.pressPowerButton();
 
 
 
