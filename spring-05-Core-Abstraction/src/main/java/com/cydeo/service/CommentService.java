@@ -4,6 +4,7 @@ import com.cydeo.model.Comment;
 import com.cydeo.proxy.CommentNotificationProxy;
 import com.cydeo.repository.CommentRepository;
 import com.cydeo.repository.DBCommentRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,7 +14,7 @@ public class CommentService {
     private final CommentNotificationProxy commentNotificationProxy;
 
     //by creating the following constructor dependency injection happens we don't need to add @Autowired
-    public CommentService(CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
+    public CommentService(CommentRepository commentRepository,@Qualifier("Email") CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }
