@@ -37,8 +37,11 @@ public class CarController {
 
     }
 
-    @RequestMapping("info/{make}/{year}")// {} represents dynamic data = localhost:8080/info/Lexus
-    public String getCarInfo(@PathVariable String make, @PathVariable int year){
+    @RequestMapping("info/{make}/{year}")// {} represents dynamic data = localhost:8080/info/Lexus/2023  Or => http://127.0.0.1:8080/info/lexus/2023
+    public String getCarInfo(@PathVariable String make, @PathVariable int year, Model model){
+
+        model.addAttribute("make", make);
+        model.addAttribute("year", year);
 
         System.out.println(make);
         System.out.println(year);
