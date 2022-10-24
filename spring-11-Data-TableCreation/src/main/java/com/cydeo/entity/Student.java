@@ -23,11 +23,15 @@ public class Student {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @Column(name = "DATE")
+    @Column(columnDefinition = "DATE")
     private LocalDate birthDate;
-    @Column(name = "TIME")
+    @Column(columnDefinition = "TIME")
     private LocalTime birthTime;
-    @Column(name = "TIMESTAMP")
+    @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime birthDateTime;
+
+    @Transient
+    private String city;
+
 
 }
