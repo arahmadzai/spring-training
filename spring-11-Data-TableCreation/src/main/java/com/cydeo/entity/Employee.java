@@ -1,15 +1,26 @@
 package com.cydeo.entity;
 
+import com.cydeo.enums.Gender;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Employee extends BaseEntity{
 
-public class Employee {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String firstName;
     private String lastName;
+    private String email;
+    @Column(columnDefinition = "DATE")
+    private LocalDate hireDate;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+    private Integer salary;
 
 }
