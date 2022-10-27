@@ -30,7 +30,7 @@ public class Movie extends BaseEntity{
     @JoinTable(name = "movie_genre_rel",
     joinColumns = @JoinColumn(name = "movie_id"),
     inverseJoinColumns = @JoinColumn(name = "genre_id"))
-    private List<Genre> genre;
+    private List<Genre> genreList;
 
 
 
