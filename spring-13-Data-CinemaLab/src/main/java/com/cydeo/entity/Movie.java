@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class Movie extends BaseEntity{
+public class Movie extends BaseEntity {
 
     private String name;
     @Column(columnDefinition = "DATE")
@@ -31,6 +31,7 @@ public class Movie extends BaseEntity{
     joinColumns = @JoinColumn(name = "movie_id"),
     inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private List<Genre> genreList;
+
 
 
 

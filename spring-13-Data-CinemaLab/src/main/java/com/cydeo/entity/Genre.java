@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 @Entity
 @NoArgsConstructor
 @Data
-public class Genre extends BaseEntity{
+public class Genre extends BaseEntity {
 
     private String name;
 }
