@@ -8,7 +8,8 @@ public class RandomConfig {
 
     @Bean
     public String myString(){
-        return "Cydeo";
+//        return new String("Cydeo");
+      return "Cydeo";
     }
 
     @Bean
