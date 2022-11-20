@@ -4,7 +4,9 @@ package com.cydeo.bean_annotation;
 import com.cydeo.bean_annotation.casefactory.Case;
 import com.cydeo.bean_annotation.monitorfactory.Monitor;
 import com.cydeo.bean_annotation.motherboardfactory.Motherboard;
+import lombok.ToString;
 
+@ToString
 public class PC {
 
     private Case theCase;
@@ -26,4 +28,5 @@ public class PC {
         // Fancy graphics
         monitor.drawPixelAt();
     }
+
 }

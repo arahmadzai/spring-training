@@ -2,9 +2,11 @@ package com.cydeo.bean_annotation.monitorfactory;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class SonyMonitor extends Monitor{
 
     public SonyMonitor(String model, String manufacturer, int size) {

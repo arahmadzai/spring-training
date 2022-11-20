@@ -26,11 +26,13 @@ public class ComputerTest {
 
         System.out.println("************Retrieving the beans******************");
 
-//        Monitor theMonitor = container.getBean(Monitor.class);
-//        Case theCase = container.getBean(Case.class);
-//        Motherboard theMotherboard = container.getBean(Motherboard.class);
-//
-//        PC myPc2 = new PC(theCase,theMonitor,theMotherboard);
+        Monitor theMonitor = container.getBean(Monitor.class);
+        Case theCase = container.getBean(Case.class);
+        Motherboard theMotherboard = container.getBean(Motherboard.class);
+
+        PC myPc2 = new PC(theCase,theMonitor,theMotherboard);
+
+        System.out.println(myPc2); //toString method added to PC class only, but not the
 
         System.out.println("************Multiple Objects******************");
 
@@ -44,6 +46,8 @@ public class ComputerTest {
         myPc.powerUp();
 
         dell.pressPowerButton();
+
+        System.out.println(myPc);
 
 
 

@@ -1,10 +1,13 @@
 package com.cydeo.bean_annotation.monitorfactory;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class AcerMonitor extends Monitor {
 
     public AcerMonitor(String model, String manufacturer, int size) {

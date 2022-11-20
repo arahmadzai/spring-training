@@ -1,5 +1,8 @@
 package com.cydeo.bean_annotation.motherboardfactory;
 
+import lombok.ToString;
+
+@ToString
 public class AsusMotherboard extends Motherboard {
 
     public AsusMotherboard(String model, String manufacturer, int ramSlots, int cardSlots, String bios) {
