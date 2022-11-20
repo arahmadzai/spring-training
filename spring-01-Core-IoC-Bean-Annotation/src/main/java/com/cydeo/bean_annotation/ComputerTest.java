@@ -32,7 +32,7 @@ public class ComputerTest {
 
         PC myPc2 = new PC(theCase,theMonitor,theMotherboard);
 
-        System.out.println(myPc2); //toString method added to PC class only, but not the
+        System.out.println(myPc2);
 
         System.out.println("************Multiple Objects******************");
 
