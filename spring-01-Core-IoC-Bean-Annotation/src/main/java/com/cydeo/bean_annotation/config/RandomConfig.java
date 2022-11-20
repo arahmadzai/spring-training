@@ -13,7 +13,7 @@ public class RandomConfig {
     }
 
     @Bean
-    public int myInteger(){
+    public Integer myInteger(){
         return 5;
     }
 
