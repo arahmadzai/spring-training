@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.annotation.WebInitParam;
 import java.util.List;
 
 @RestController
@@ -47,6 +48,18 @@ public class CourseController_ResponseEntity {
                 .status(HttpStatus.CREATED)
                 .header("Operation","Create")
                 .body(courseService.createCourse(course));
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteCourseById(@PathVariable("id") long courseId){
+        courseService.deleteCourseById(courseId);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<Void> updateCourse(@PathVariable("id") long courseId, @RequestBody CourseDTO course){
+        courseService.updateCourse(courseId,course);
+        return ResponseEntity.noContent().build();
     }
 
 }
