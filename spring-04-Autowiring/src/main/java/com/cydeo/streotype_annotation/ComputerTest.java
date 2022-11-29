@@ -14,5 +14,7 @@ public class ComputerTest {
         System.out.println(myPc.getTheCase().getDimensions().getDepth());
 
         System.out.println(myPc.getMotherboard());
+
+        System.out.println(myPc);
     }
 }
