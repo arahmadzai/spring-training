@@ -1,8 +1,10 @@
 package com.cydeo.streotype_annotation.motherboardfactory;
 
+import lombok.Data;
 import lombok.Getter;
 
 @Getter
+@Data
 public abstract class Motherboard {
 
     private String model;

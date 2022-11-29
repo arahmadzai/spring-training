@@ -4,12 +4,14 @@ import com.cydeo.streotype_annotation.casefactory.Case;
 import com.cydeo.streotype_annotation.monitorfactory.Monitor;
 import com.cydeo.streotype_annotation.motherboardfactory.Motherboard;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Getter
 @Component
+@Data
 public class PC {
 
     @Autowired
@@ -18,11 +20,11 @@ public class PC {
     private Motherboard motherboard;
 
 
-//    public PC(Case theCase, Monitor monitor, Motherboard motherboard) {
-//        this.theCase = theCase;
-//        this.monitor = monitor;
-//        this.motherboard = motherboard;
-//    }
+    public PC(Case theCase, Monitor monitor, Motherboard motherboard) {
+        this.theCase = theCase;
+        this.monitor = monitor;
+        this.motherboard = motherboard;
+    }
 
     public void powerUp() {
         theCase.pressPowerButton();

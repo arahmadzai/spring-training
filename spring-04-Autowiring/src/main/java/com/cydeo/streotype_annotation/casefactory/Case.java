@@ -1,9 +1,11 @@
 package com.cydeo.streotype_annotation.casefactory;
 
+import lombok.Data;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Getter
+@Data
 public abstract class Case {
 
     private String model;
