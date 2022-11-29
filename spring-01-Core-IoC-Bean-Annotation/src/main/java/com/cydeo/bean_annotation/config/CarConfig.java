@@ -1,6 +1,7 @@
 package com.cydeo.bean_annotation.config;
 
-import com.cydeo.bean_annotation.vehicleFactory.Car1;
+import com.cydeo.bean_annotation.vehicleFactory.Lexus;
+import com.cydeo.bean_annotation.vehicleFactory.Toyota;
 import com.cydeo.bean_annotation.vehicleFactory.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,14 +13,14 @@ public class CarConfig {
     @Bean(name = "toyota")
     @Primary
     public Vehicle toyota(){
-        Vehicle toyota = new Car1("Toyota", "Corolla", 2012);
+        Vehicle car1 = new Toyota("Toyota", "Corolla", 2012);
 
-        return toyota;
+        return car1;
     }
 
     @Bean(name = "lexus")
     public Vehicle lexus(){
-        Vehicle lexus = new Car1("Lexus", "LX760", 2023);
+        Vehicle lexus = new Lexus("Lexus", "LX760", 2023);
 
         return lexus;
     }

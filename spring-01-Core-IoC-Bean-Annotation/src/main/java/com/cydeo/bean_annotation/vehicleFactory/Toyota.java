@@ -1,9 +1,9 @@
 package com.cydeo.bean_annotation.vehicleFactory;
 
-public class Car1 extends Vehicle{
+public class Toyota extends Vehicle{
 
-    public Car1(String make, String model, Integer year) {
-        super(make, model, year);
+    public Toyota(String make, String model, Integer year) {
+        super("make", model, year);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.cydeo.bean_annotation;
 
 import com.cydeo.bean_annotation.config.CarConfig;
-import com.cydeo.bean_annotation.vehicleFactory.Car1;
 import com.cydeo.bean_annotation.vehicleFactory.Vehicle;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
