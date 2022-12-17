@@ -46,7 +46,7 @@ public class CalculatorParameterizedTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/sample-data.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/sample-data.csv", numLinesToSkip = 2)
     void testCase6(int num1, int num2, int result) {
         Assertions.assertEquals(result, Calculator.add(num1, num2));
     }
