@@ -13,7 +13,7 @@ public class CydeoApplication {
 
         Comment comment = new Comment();
         comment.setAuthor("Abid");
-        comment.setText("Allah Is One");
+        comment.setText("Allah Is Great");
 
         ApplicationContext container = SpringApplication.run(CydeoApplication.class, args);
 
